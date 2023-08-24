@@ -14,7 +14,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         imageView.alpha = 0.5
     }
-    func updateImageAlpha(scale: CGFloat) {
+    func updateImageAlpha(scale: CGFloat, cornerRadius: CGFloat) {
         imageView.alpha = scale
+        imageView.layer.cornerRadius = cornerRadius
     }
 }

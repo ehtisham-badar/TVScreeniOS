@@ -38,6 +38,8 @@ extension LiveTvViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
         cell.imageView.image = UIImage(named: "spidey")
         cell.imageView.layer.cornerRadius = 50
+        cell.imageView.clipsToBounds = true
+        cell.imageView.layer.masksToBounds = false
         return cell
     }
 }
