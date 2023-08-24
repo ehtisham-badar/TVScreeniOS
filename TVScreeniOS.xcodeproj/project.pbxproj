@@ -13,6 +13,11 @@
 		FF1DE3B02A973EBD002BBAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1DE3AE2A973EBD002BBAAE /* Main.storyboard */; };
 		FF1DE3B22A973EBE002BBAAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1DE3B12A973EBE002BBAAE /* Assets.xcassets */; };
 		FF1DE3B52A973EBE002BBAAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1DE3B32A973EBE002BBAAE /* LaunchScreen.storyboard */; };
+		FF6962E72A9746B900015B73 /* LiveTvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962E62A9746B900015B73 /* LiveTvViewController.swift */; };
+		FF6962EA2A97607E00015B73 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962E92A97607E00015B73 /* UIColor+Extension.swift */; };
+		FF6962EE2A9760A300015B73 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962ED2A9760A300015B73 /* UIView+Extension.swift */; };
+		FF6962F12A97697800015B73 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962F02A97697800015B73 /* PhotoCollectionViewCell.swift */; };
+		FF6962F32A976A0000015B73 /* OverlappingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962F22A976A0000015B73 /* OverlappingFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		FF1DE3B12A973EBE002BBAAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF1DE3B42A973EBE002BBAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF1DE3B62A973EBE002BBAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6962E62A9746B900015B73 /* LiveTvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTvViewController.swift; sourceTree = "<group>"; };
+		FF6962E92A97607E00015B73 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FF6962ED2A9760A300015B73 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FF6962F02A97697800015B73 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF6962F22A976A0000015B73 /* OverlappingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		FF6962E12A9740F700015B73 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF6962E82A97606F00015B73 /* Utilities */,
 				FF1DE3B12A973EBE002BBAAE /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -87,7 +98,9 @@
 		FF6962E22A97410100015B73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF6962EF2A97696200015B73 /* Cells */,
 				FF1DE3AC2A973EBD002BBAAE /* ViewController.swift */,
+				FF6962E62A9746B900015B73 /* LiveTvViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +126,24 @@
 				FF1DE3B32A973EBE002BBAAE /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FF6962E82A97606F00015B73 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FF6962E92A97607E00015B73 /* UIColor+Extension.swift */,
+				FF6962ED2A9760A300015B73 /* UIView+Extension.swift */,
+				FF6962F22A976A0000015B73 /* OverlappingFlowLayout.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FF6962EF2A97696200015B73 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF6962F02A97697800015B73 /* PhotoCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6962EE2A9760A300015B73 /* UIView+Extension.swift in Sources */,
 				FF1DE3AD2A973EBD002BBAAE /* ViewController.swift in Sources */,
 				FF1DE3A92A973EBD002BBAAE /* AppDelegate.swift in Sources */,
+				FF6962F32A976A0000015B73 /* OverlappingFlowLayout.swift in Sources */,
+				FF6962E72A9746B900015B73 /* LiveTvViewController.swift in Sources */,
+				FF6962F12A97697800015B73 /* PhotoCollectionViewCell.swift in Sources */,
 				FF1DE3AB2A973EBD002BBAAE /* SceneDelegate.swift in Sources */,
+				FF6962EA2A97607E00015B73 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

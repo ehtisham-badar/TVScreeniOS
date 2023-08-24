@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,14 +28,137 @@
         <!--Live Tv-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVScreeniOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LiveTvViewController" id="BYZ-38-t0r" customClass="LiveTvViewController" customModule="TVScreeniOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWp-WA-a4R">
+                                <rect key="frame" x="0.0" y="-100" width="393" height="426"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.043137254901960784" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pya-Mp-7B1">
+                                <rect key="frame" x="-100" y="226" width="593" height="200"/>
+                                <color key="backgroundColor" red="0.87058823529999996" green="0.043137254899999998" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="k0R-XQ-cz5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwI-y3-ouQ">
+                                <rect key="frame" x="100" y="411" width="193" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIVE TV CHANNELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eD-nc-J72">
+                                        <rect key="frame" x="8" y="0.0" width="177" height="30"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5eD-nc-J72" secondAttribute="bottom" id="2ql-aj-55t"/>
+                                    <constraint firstItem="5eD-nc-J72" firstAttribute="top" secondItem="iwI-y3-ouQ" secondAttribute="top" id="KVU-7x-JLv"/>
+                                    <constraint firstAttribute="height" constant="30" id="cXA-5Z-f7I"/>
+                                    <constraint firstItem="5eD-nc-J72" firstAttribute="leading" secondItem="iwI-y3-ouQ" secondAttribute="leading" constant="8" id="eO0-yS-Y5L"/>
+                                    <constraint firstAttribute="trailing" secondItem="5eD-nc-J72" secondAttribute="trailing" constant="8" id="fhe-NR-Qzr"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-dW-BOl">
+                                <rect key="frame" x="16" y="107" width="361" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="UOq-Ms-nfj"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ywg-X2-if6">
+                                    <size key="itemSize" width="161" height="199"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="kYy-aE-BW1" customClass="PhotoCollectionViewCell" customModule="TVScreeniOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50.666666666666664" width="161" height="199"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yt0-05-yBH">
+                                            <rect key="frame" x="0.0" y="0.0" width="161" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUL-QZ-vPZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="199"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spidey" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-Nh-jfX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="161" height="199"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="50"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="l8B-Nh-jfX" firstAttribute="leading" secondItem="LUL-QZ-vPZ" secondAttribute="leading" id="QeP-J8-BqW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="l8B-Nh-jfX" secondAttribute="trailing" id="aM1-XQ-q9k"/>
+                                                        <constraint firstItem="l8B-Nh-jfX" firstAttribute="top" secondItem="LUL-QZ-vPZ" secondAttribute="top" id="szH-Bj-soC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="l8B-Nh-jfX" secondAttribute="bottom" id="vIg-Ei-43D"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LUL-QZ-vPZ" firstAttribute="top" secondItem="yt0-05-yBH" secondAttribute="top" id="33S-lZ-pjI"/>
+                                                <constraint firstAttribute="bottom" secondItem="LUL-QZ-vPZ" secondAttribute="bottom" id="N58-Ud-9rj"/>
+                                                <constraint firstAttribute="trailing" secondItem="LUL-QZ-vPZ" secondAttribute="trailing" id="QAN-sE-J7U"/>
+                                                <constraint firstItem="LUL-QZ-vPZ" firstAttribute="leading" secondItem="yt0-05-yBH" secondAttribute="leading" id="cGM-DB-nPC"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="161" height="199"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="l8B-Nh-jfX" id="5DJ-sf-enb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ulJ-MJ-hl9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gGB-l2-4UF"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cast" translatesAutoresizingMaskIntoConstraints="NO" id="zfl-5m-yBo">
+                                <rect key="frame" x="353" y="75" width="24" height="24"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.094117647058823528" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iwI-y3-ouQ" firstAttribute="centerX" secondItem="pya-Mp-7B1" secondAttribute="centerX" id="1vV-SN-0zd"/>
+                            <constraint firstItem="zfl-5m-yBo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="6PG-wR-u1x"/>
+                            <constraint firstItem="7ot-dW-BOl" firstAttribute="top" secondItem="zfl-5m-yBo" secondAttribute="bottom" constant="8" id="7Uy-rq-53C"/>
+                            <constraint firstItem="ZWp-WA-a4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7ne-r6-ToE"/>
+                            <constraint firstItem="iwI-y3-ouQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="8HD-bW-Roh"/>
+                            <constraint firstItem="pya-Mp-7B1" firstAttribute="top" secondItem="ZWp-WA-a4R" secondAttribute="bottom" constant="-100" id="8MI-bm-NoW"/>
+                            <constraint firstItem="ZWp-WA-a4R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-100" id="Eey-oi-Ohv"/>
+                            <constraint firstItem="7ot-dW-BOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XfW-Ao-NTW"/>
+                            <constraint firstAttribute="trailing" secondItem="zfl-5m-yBo" secondAttribute="trailing" constant="16" id="a2O-gA-1Ms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ot-dW-BOl" secondAttribute="trailing" constant="16" id="bOl-sn-g66"/>
+                            <constraint firstItem="ZWp-WA-a4R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ctC-54-UVC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iwI-y3-ouQ" secondAttribute="trailing" constant="100" id="eKU-lS-ANB"/>
+                            <constraint firstItem="pya-Mp-7B1" firstAttribute="trailing" secondItem="ZWp-WA-a4R" secondAttribute="trailing" constant="100" id="f3b-fk-fXi"/>
+                            <constraint firstItem="ZWp-WA-a4R" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="hit-11-UlX"/>
+                            <constraint firstItem="iwI-y3-ouQ" firstAttribute="top" secondItem="pya-Mp-7B1" secondAttribute="bottom" constant="-15" id="rVi-bh-D0m"/>
+                            <constraint firstItem="pya-Mp-7B1" firstAttribute="leading" secondItem="ZWp-WA-a4R" secondAttribute="leading" constant="-100" id="vZD-7N-owE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Live Tv" image="livetv" id="vOu-fe-6Pf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="7ot-dW-BOl" id="moC-lR-TA7"/>
+                        <outlet property="curvedView" destination="pya-Mp-7B1" id="DGu-aN-nqZ"/>
+                        <outlet property="liveTvView" destination="iwI-y3-ouQ" id="hOp-it-rBd"/>
+                        <outlet property="mainView" destination="ZWp-WA-a4R" id="td1-bQ-TDh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,9 +203,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cast" width="24" height="24"/>
         <image name="livetv" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
         <image name="radio" width="24" height="24"/>
+        <image name="spidey" width="204" height="247"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
