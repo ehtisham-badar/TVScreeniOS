@@ -22,11 +22,36 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spidey" translatesAutoresizingMaskIntoConstraints="NO" id="LJo-xC-fdn">
                                 <rect key="frame" x="0.0" y="0.0" width="189" height="227"/>
                             </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOI-wa-cSE">
+                                <rect key="frame" x="0.0" y="207" width="189" height="20"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kAa-VN-XNV">
+                                    <rect key="frame" x="0.0" y="0.0" width="189" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vTq-uT-d9f"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xd-LV-UJ8">
+                                <rect key="frame" x="76" y="206.66666666666666" width="37" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xat-bA-5aG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MOI-wa-cSE" firstAttribute="leading" secondItem="QDP-NC-FYt" secondAttribute="leading" id="B93-Uo-GTu"/>
+                            <constraint firstItem="9Xd-LV-UJ8" firstAttribute="centerY" secondItem="MOI-wa-cSE" secondAttribute="centerY" id="JAs-yN-B6x"/>
+                            <constraint firstItem="9Xd-LV-UJ8" firstAttribute="centerX" secondItem="MOI-wa-cSE" secondAttribute="centerX" id="LzP-zc-qj1"/>
                             <constraint firstAttribute="trailing" secondItem="LJo-xC-fdn" secondAttribute="trailing" id="Xra-tz-udY"/>
+                            <constraint firstAttribute="bottom" secondItem="MOI-wa-cSE" secondAttribute="bottom" id="dB8-au-iq5"/>
                             <constraint firstItem="LJo-xC-fdn" firstAttribute="leading" secondItem="QDP-NC-FYt" secondAttribute="leading" id="dzN-13-MTH"/>
+                            <constraint firstAttribute="trailing" secondItem="MOI-wa-cSE" secondAttribute="trailing" id="kE2-cs-2aL"/>
                             <constraint firstItem="LJo-xC-fdn" firstAttribute="top" secondItem="QDP-NC-FYt" secondAttribute="top" id="n0N-S8-b83"/>
                             <constraint firstAttribute="bottom" secondItem="LJo-xC-fdn" secondAttribute="bottom" id="rfB-Qd-c5d"/>
                         </constraints>
@@ -42,6 +67,7 @@
             </constraints>
             <size key="customSize" width="189" height="227"/>
             <connections>
+                <outlet property="blurView" destination="kAa-VN-XNV" id="MhE-tw-Rv6"/>
                 <outlet property="imageview" destination="LJo-xC-fdn" id="M8e-5P-heb"/>
                 <outlet property="mainview" destination="QDP-NC-FYt" id="q7i-y0-ocd"/>
             </connections>

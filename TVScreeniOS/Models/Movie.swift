@@ -9,12 +9,12 @@ import Foundation
 
 // MARK: - Movie
 struct Movie: Codable {
-    let movieList: [Movie]
+    let movieList: [String]
     let sections: [Section]
 }
 
 // MARK: - Section
 struct Section: Codable {
     let sectionHeading: String
-    let movies: [Movie]
+    let movies: [String]
 }

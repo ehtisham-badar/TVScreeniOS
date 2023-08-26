@@ -16,8 +16,14 @@ class LiveTvViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tableView: UITableView!
     
+    let viewModel = MovieViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.loadMovieData { isLoad in
+            self.collectionView.reloadData()
+            self.tableView.reloadData()
+        }
         curvedView.layer.cornerRadius = 250
         liveTvView.layer.cornerRadius = 8.0
         setLayout()
@@ -35,12 +41,12 @@ class LiveTvViewController: UIViewController {
 
 extension LiveTvViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.viewModel.movieData?.movieList.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
-        cell.imageView.image = UIImage(named: "spidey")
+        cell.imageView.image = UIImage(named: self.viewModel.movieData?.movieList[indexPath.item] ?? "")
         return cell
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -60,7 +66,7 @@ extension LiveTvViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
 extension LiveTvViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return self.viewModel.movieData?.sections.count ?? 0
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -68,6 +74,10 @@ extension LiveTvViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilmTableViewCell") as? FilmTableViewCell else { return UITableViewCell() }
+        cell.sectionIndex = indexPath.section
+        cell.collectionView.reloadData()
+        cell.viewModel = self.viewModel
+        cell.sectionHeading.text = self.viewModel.movieData?.sections[indexPath.section].sectionHeading ?? ""
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

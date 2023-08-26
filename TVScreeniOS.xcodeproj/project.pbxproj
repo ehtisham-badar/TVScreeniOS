@@ -19,6 +19,7 @@
 		FF27C5DA2A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF27C5D82A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib */; };
 		FF27C5DC2A99F8BA007F9AC9 /* MovieJsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = FF27C5DB2A99F8BA007F9AC9 /* MovieJsonFile.json */; };
 		FF27C5DE2A99F980007F9AC9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C5DD2A99F980007F9AC9 /* Movie.swift */; };
+		FF27C5E02A99FA2A007F9AC9 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C5DF2A99FA2A007F9AC9 /* MovieViewModel.swift */; };
 		FF6962E72A9746B900015B73 /* LiveTvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962E62A9746B900015B73 /* LiveTvViewController.swift */; };
 		FF6962EA2A97607E00015B73 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962E92A97607E00015B73 /* UIColor+Extension.swift */; };
 		FF6962EE2A9760A300015B73 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962ED2A9760A300015B73 /* UIView+Extension.swift */; };
@@ -41,6 +42,7 @@
 		FF27C5D82A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmInnerCollectionViewCell.xib; sourceTree = "<group>"; };
 		FF27C5DB2A99F8BA007F9AC9 /* MovieJsonFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieJsonFile.json; sourceTree = "<group>"; };
 		FF27C5DD2A99F980007F9AC9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FF27C5DF2A99FA2A007F9AC9 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		FF6962E62A9746B900015B73 /* LiveTvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTvViewController.swift; sourceTree = "<group>"; };
 		FF6962E92A97607E00015B73 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FF6962ED2A9760A300015B73 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		FF6962E32A97410600015B73 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FF27C5DF2A99FA2A007F9AC9 /* MovieViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				FF6962EA2A97607E00015B73 /* UIColor+Extension.swift in Sources */,
 				FF27C5DE2A99F980007F9AC9 /* Movie.swift in Sources */,
 				FF27C5D92A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.swift in Sources */,
+				FF27C5E02A99FA2A007F9AC9 /* MovieViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

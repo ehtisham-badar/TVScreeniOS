@@ -22,6 +22,8 @@
       "sectionHeading": "Comedy Movies",
       "movies": [
         "spidey",
+        "spidey",
+        "spidey",
         "spidey"
       ]
     },
@@ -29,12 +31,18 @@
       "sectionHeading": "Drama Movies",
       "movies": [
         "spidey",
+        "spidey",
+        "spidey",
+        "spidey",
+        "spidey",
         "spidey"
       ]
     },
         {
       "sectionHeading": "Action Movies",
       "movies": [
+        "spidey",
+        "spidey",
         "spidey",
         "spidey"
       ]

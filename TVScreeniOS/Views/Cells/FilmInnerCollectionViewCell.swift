@@ -9,8 +9,10 @@ import UIKit
 
 class FilmInnerCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var mainview: UIView!
     @IBOutlet weak var imageview: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         mainview.layer.cornerRadius = 15.0

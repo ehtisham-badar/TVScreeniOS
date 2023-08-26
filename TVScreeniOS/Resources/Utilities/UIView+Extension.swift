@@ -22,4 +22,5 @@ extension UIView {
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         layer.cornerRadius = topCornerRadius
     }
+
 }
