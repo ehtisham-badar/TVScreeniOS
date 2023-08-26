@@ -70,6 +70,7 @@
                 <outlet property="blurView" destination="kAa-VN-XNV" id="MhE-tw-Rv6"/>
                 <outlet property="imageview" destination="LJo-xC-fdn" id="M8e-5P-heb"/>
                 <outlet property="mainview" destination="QDP-NC-FYt" id="q7i-y0-ocd"/>
+                <outlet property="visualEffect" destination="MOI-wa-cSE" id="VOm-fd-wes"/>
             </connections>
             <point key="canvasLocation" x="93.89312977099236" y="82.042253521126767"/>
         </collectionViewCell>

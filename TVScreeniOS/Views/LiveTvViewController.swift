@@ -34,8 +34,8 @@ class LiveTvViewController: UIViewController {
     private func setLayout() {
         let layout = OverlappingFlowLayout()
         collectionView.collectionViewLayout = layout
-        let initialIndexPath = IndexPath(item: 1, section: 0)
-        collectionView.scrollToItem(at: initialIndexPath, at: .centeredHorizontally, animated: false)
+//        let initialIndexPath = IndexPath(item: 1, section: 0)
+//        collectionView.scrollToItem(at: initialIndexPath, at: .centeredHorizontally, animated: false)
     }
 }
 
