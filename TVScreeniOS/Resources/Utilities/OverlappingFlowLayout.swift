@@ -32,11 +32,11 @@ class OverlappingFlowLayout: UICollectionViewFlowLayout {
             
             if isFirstLoad && attributes.indexPath.item == 1 {
                 if let cell = collectionView?.cellForItem(at: attributes.indexPath) as? PhotoCollectionViewCell {
-                    cell.updateImageAlpha(scale: 1.0, cornerRadius: 50)
+                    cell.updateImageAlpha(scale: 1.0)
                 }
             } else {
                 if let cell = collectionView?.cellForItem(at: attributes.indexPath) as? PhotoCollectionViewCell {
-                    cell.updateImageAlpha(scale: scale, cornerRadius: 50)
+                    cell.updateImageAlpha(scale: scale)
                 }
             }
         }

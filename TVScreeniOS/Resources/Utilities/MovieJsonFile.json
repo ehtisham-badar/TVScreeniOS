@@ -1,0 +1,57 @@
+{
+  "movieList": [
+    "spidey",
+    "spidey",
+    "spidey",
+        "spidey",
+    "spidey",
+    "spidey",
+        "spidey",
+    "spidey",
+    "spidey"
+  ],
+  "sections": [
+    {
+      "sectionHeading": "Action Movies",
+      "movies": [
+        "spidey",
+        "spidey"
+      ]
+    },
+    {
+      "sectionHeading": "Comedy Movies",
+      "movies": [
+        "spidey",
+        "spidey"
+      ]
+    },
+    {
+      "sectionHeading": "Drama Movies",
+      "movies": [
+        "spidey",
+        "spidey"
+      ]
+    },
+        {
+      "sectionHeading": "Action Movies",
+      "movies": [
+        "spidey",
+        "spidey"
+      ]
+    },
+    {
+      "sectionHeading": "Comedy Movies",
+      "movies": [
+        "spidey",
+        "spidey"
+      ]
+    },
+    {
+      "sectionHeading": "Drama Movies",
+      "movies": [
+        "spidey",
+        "spidey"
+      ]
+    }
+  ]
+}

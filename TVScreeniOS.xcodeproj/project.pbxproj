@@ -13,6 +13,12 @@
 		FF1DE3B02A973EBD002BBAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1DE3AE2A973EBD002BBAAE /* Main.storyboard */; };
 		FF1DE3B22A973EBE002BBAAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1DE3B12A973EBE002BBAAE /* Assets.xcassets */; };
 		FF1DE3B52A973EBE002BBAAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1DE3B32A973EBE002BBAAE /* LaunchScreen.storyboard */; };
+		FF27C5D52A99CCE7007F9AC9 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C5D32A99CCE7007F9AC9 /* FilmTableViewCell.swift */; };
+		FF27C5D62A99CCE7007F9AC9 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF27C5D42A99CCE7007F9AC9 /* FilmTableViewCell.xib */; };
+		FF27C5D92A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C5D72A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.swift */; };
+		FF27C5DA2A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF27C5D82A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib */; };
+		FF27C5DC2A99F8BA007F9AC9 /* MovieJsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = FF27C5DB2A99F8BA007F9AC9 /* MovieJsonFile.json */; };
+		FF27C5DE2A99F980007F9AC9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF27C5DD2A99F980007F9AC9 /* Movie.swift */; };
 		FF6962E72A9746B900015B73 /* LiveTvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962E62A9746B900015B73 /* LiveTvViewController.swift */; };
 		FF6962EA2A97607E00015B73 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962E92A97607E00015B73 /* UIColor+Extension.swift */; };
 		FF6962EE2A9760A300015B73 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6962ED2A9760A300015B73 /* UIView+Extension.swift */; };
@@ -29,6 +35,12 @@
 		FF1DE3B12A973EBE002BBAAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF1DE3B42A973EBE002BBAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF1DE3B62A973EBE002BBAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF27C5D32A99CCE7007F9AC9 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		FF27C5D42A99CCE7007F9AC9 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmTableViewCell.xib; sourceTree = "<group>"; };
+		FF27C5D72A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmInnerCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF27C5D82A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmInnerCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF27C5DB2A99F8BA007F9AC9 /* MovieJsonFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieJsonFile.json; sourceTree = "<group>"; };
+		FF27C5DD2A99F980007F9AC9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FF6962E62A9746B900015B73 /* LiveTvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTvViewController.swift; sourceTree = "<group>"; };
 		FF6962E92A97607E00015B73 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FF6962ED2A9760A300015B73 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -115,6 +127,7 @@
 		FF6962E42A97410C00015B73 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FF27C5DD2A99F980007F9AC9 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,6 +147,7 @@
 				FF6962E92A97607E00015B73 /* UIColor+Extension.swift */,
 				FF6962ED2A9760A300015B73 /* UIView+Extension.swift */,
 				FF6962F22A976A0000015B73 /* OverlappingFlowLayout.swift */,
+				FF27C5DB2A99F8BA007F9AC9 /* MovieJsonFile.json */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -142,6 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				FF6962F02A97697800015B73 /* PhotoCollectionViewCell.swift */,
+				FF27C5D32A99CCE7007F9AC9 /* FilmTableViewCell.swift */,
+				FF27C5D42A99CCE7007F9AC9 /* FilmTableViewCell.xib */,
+				FF27C5D72A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.swift */,
+				FF27C5D82A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -205,6 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1DE3B52A973EBE002BBAAE /* LaunchScreen.storyboard in Resources */,
+				FF27C5DA2A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.xib in Resources */,
+				FF27C5D62A99CCE7007F9AC9 /* FilmTableViewCell.xib in Resources */,
+				FF27C5DC2A99F8BA007F9AC9 /* MovieJsonFile.json in Resources */,
 				FF1DE3B22A973EBE002BBAAE /* Assets.xcassets in Resources */,
 				FF1DE3B02A973EBD002BBAAE /* Main.storyboard in Resources */,
 			);
@@ -223,8 +244,11 @@
 				FF6962F32A976A0000015B73 /* OverlappingFlowLayout.swift in Sources */,
 				FF6962E72A9746B900015B73 /* LiveTvViewController.swift in Sources */,
 				FF6962F12A97697800015B73 /* PhotoCollectionViewCell.swift in Sources */,
+				FF27C5D52A99CCE7007F9AC9 /* FilmTableViewCell.swift in Sources */,
 				FF1DE3AB2A973EBD002BBAAE /* SceneDelegate.swift in Sources */,
 				FF6962EA2A97607E00015B73 /* UIColor+Extension.swift in Sources */,
+				FF27C5DE2A99F980007F9AC9 /* Movie.swift in Sources */,
+				FF27C5D92A99CE5C007F9AC9 /* FilmInnerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
